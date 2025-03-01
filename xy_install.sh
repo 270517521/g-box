@@ -1103,7 +1103,7 @@ function user_select4() {
         fi
         [[ -n $remote_size ]] && echo -e "remotesize is：${remote_size}" && break
     done
-    if [[ $remote_size -lt 100000 ]]; then
+    if [[ $remote_size -lt 10000 ]]; then
         ERROR "获取文件大小失败，请检查网络后重新运行脚本！"
         echo -e "${Yellow}排障步骤：\n1、检查5678打开alist能否正常播放（排除token失效和风控！）"
         echo -e "${Yellow}2、检查alist配置目录的docker_address.txt是否正确指向你的alist访问地址，\n   应为宿主机+5678端口，示例：http://192.168.2.3:5678"
